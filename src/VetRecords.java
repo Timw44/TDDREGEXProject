@@ -102,4 +102,11 @@ public class VetRecords
     {
         this.species = species;
     }
+
+    //toString
+    public String toString()
+    {
+        return "Owner: " + FName + ", " + LName + "; Pet: " + petName + ", " + age + " years old, " +
+                weight + "kg, " + species;
+    }
 }
