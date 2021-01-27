@@ -2,6 +2,6 @@ public class VetDriver
 {
     public static void main(String[] args)
     {
-        VetRecords pup = new VetRecords("Dan", "Ken", "Max", true, 1, 15.6, "Dog");
+        VetRecords pup = new VetRecords("Tim", "Wilks", "Max", true, 10, 25.6, "Dog");
     }
 }
