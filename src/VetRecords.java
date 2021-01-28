@@ -104,7 +104,7 @@ public class VetRecords
         this.species = species;
     }
 
-    //methods
+    //validation methods
 
 
     //toString
