@@ -5,17 +5,18 @@ public class VetRecords
     public String LName;
     public String petName;
     public String species;
-    public boolean isMale;
+    public String gender;
     public int age;
     public double weight;
 
+
     //constructors
-    public VetRecords(String firstName, String lastName, String petName, boolean isMale, int age, double weight, String species)
+    public VetRecords(String firstName, String lastName, String petName, String gender, int age, double weight, String species)
     {
         this.FName = firstName;
         this.LName = lastName;
         this.petName = petName;
-        this.isMale = isMale;
+        this.gender = gender;
         this.age = age;
         this.weight = weight;
         this.species = species;
@@ -26,7 +27,7 @@ public class VetRecords
         FName = null;
         LName = null;
         petName = null;
-        isMale = false;
+        gender = null;
         age = 0;
         weight = 0.0;
         species = null;
@@ -48,9 +49,9 @@ public class VetRecords
         return petName;
     }
 
-    public boolean getIsMale()
+    public String getGender()
     {
-        return isMale;
+        return gender;
     }
 
     public int getAge()
@@ -83,9 +84,9 @@ public class VetRecords
         this.petName = petName;
     }
 
-    public void setMale(boolean male)
+    public void setGender(String gender)
     {
-        isMale = male;
+        this.gender = gender;
     }
 
     public void setAge(int age)
@@ -103,10 +104,13 @@ public class VetRecords
         this.species = species;
     }
 
+    //methods
+
+
     //toString
     public String toString()
     {
-        return "Owner: " + FName + ", " + LName + "; Pet: " + petName + ", " + age + " years old, " +
+        return "Owner: " + FName + ", " + LName + "; Pet: " + petName + ", " + gender + ", " + age + " years old, " +
                 weight + "kg, " + species;
     }
 }
