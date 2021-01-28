@@ -7,5 +7,5 @@ public class VetDriver
         Scanner scan = new Scanner(System.in);
         VetRecords pup = new VetRecords("Tim", "Wilks", "Max", "male", 10, 25.6, "Dog");
         System.out.println(pup.toString());
-    }
-}
+    }//end of main method
+}//end of VetDriver class

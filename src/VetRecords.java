@@ -20,7 +20,7 @@ public class VetRecords
         this.age = age;
         this.weight = weight;
         this.species = species;
-    }
+    }//end of all elements constructor
 
     public VetRecords()
     {
@@ -31,7 +31,7 @@ public class VetRecords
         age = 0;
         weight = 0.0;
         species = null;
-    }
+    }//end of empty constructor
 
     //getters & setters
     public String getFName()
@@ -112,5 +112,5 @@ public class VetRecords
     {
         return "Owner: " + FName + ", " + LName + "; Pet: " + petName + ", " + gender + ", " + age + " years old, " +
                 weight + "kg, " + species;
-    }
-}
+    }//end of toString
+}//end of VetRecords class
