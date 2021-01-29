@@ -28,7 +28,7 @@ public class VetRecords
     public VetRecords(String firstName, String lastName, String petName, String gender, int age, double weight, String species)
     {
         this.FName = FNameVal(firstName);
-        this.LName = lastName;
+        this.LName = LNameVal(lastName);
         this.petName = petName;
         this.gender = gender;
         this.age = age;
@@ -79,7 +79,7 @@ public class VetRecords
 
     public void setLName(String LName)
     {
-        this.LName = LName;
+        this.LName = LNameVal(LName);
     }
 
     public void setPetName(String petName)
@@ -118,6 +118,16 @@ public class VetRecords
         }
         return firstName;
     }//end of FNameVal method
+
+    private String LNameVal(String lastName)
+    {
+        while(!lastName.matches("[A-Z][A-z]*"))
+        {
+            System.out.println("Not a valid entry. Try Again.");
+            lastName = input.nextLine();
+        }
+        return lastName;
+    }//end of LNameVal method
 
     //toString
     public String toString()
