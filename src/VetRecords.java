@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class VetRecords
 {
+    Scanner input = new Scanner(System.in);
     //variables
     public String FName;
     public String LName;
@@ -11,17 +14,6 @@ public class VetRecords
 
 
     //constructors
-    public VetRecords(String firstName, String lastName, String petName, String gender, int age, double weight, String species)
-    {
-        this.FName = firstName;
-        this.LName = lastName;
-        this.petName = petName;
-        this.gender = gender;
-        this.age = age;
-        this.weight = weight;
-        this.species = species;
-    }//end of all elements constructor
-
     public VetRecords()
     {
         FName = null;
@@ -32,6 +24,17 @@ public class VetRecords
         weight = 0.0;
         species = null;
     }//end of empty constructor
+
+    public VetRecords(String firstName, String lastName, String petName, String gender, int age, double weight, String species)
+    {
+        this.FName = firstName;
+        this.LName = lastName;
+        this.petName = petName;
+        this.gender = gender;
+        this.age = age;
+        this.weight = weight;
+        this.species = species;
+    }//end of all elements constructor
 
     //getters & setters
     public String getFName()
