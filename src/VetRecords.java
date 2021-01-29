@@ -109,6 +109,15 @@ public class VetRecords
 
     //validation methods
 
+    private String FNameVal(String firstName)
+    {
+        while(firstName)
+        {
+            System.out.println("Not a valid entry. Try Again.");
+            firstName = input.nextLine();
+        }
+        return firstName;
+    }
 
     //toString
     public String toString()
