@@ -30,7 +30,7 @@ public class VetRecords
         this.FName = FNameVal(firstName);
         this.LName = LNameVal(lastName);
         this.petName = PNameVal(petName);
-        this.gender = gender;
+        this.gender = GenderVal(gender);
         this.age = age;
         this.weight = weight;
         this.species = species;
@@ -89,7 +89,7 @@ public class VetRecords
 
     public void setGender(String gender)
     {
-        this.gender = gender;
+        this.gender = GenderVal(gender);
     }
 
     public void setAge(int age)
@@ -138,6 +138,16 @@ public class VetRecords
         }
         return petName;
     }//end of PNameVal method
+
+    private String GenderVal(String gender)
+    {
+        while(!gender.matches("(Male|male|Female|female)"))
+        {
+            System.out.println("Not a valid entry. Try Again.");
+            gender = input.nextLine();
+        }
+        return gender;
+    }//end of GenderVal method
 
     //toString
     public String toString()

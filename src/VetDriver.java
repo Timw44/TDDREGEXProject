@@ -7,12 +7,14 @@ public class VetDriver
         VetRecords pup = new VetRecords();
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Enter Your First Name: ");
+        System.out.print("Enter Your First Name: ");
         pup.setFName(scan.nextLine());
-        System.out.println("Enter Your Last Name: ");
+        System.out.print("Enter Your Last Name: ");
         pup.setLName(scan.nextLine());
-        System.out.println("Enter Your Pet's Name: ");
+        System.out.print("Enter Your Pet's Name: ");
         pup.setPetName(scan.nextLine());
+        System.out.print("Enter Your Pet's Gender: ");
+        pup.setGender(scan.nextLine());
         pup.toString();
     }//end of main method
 }//end of VetDriver class
