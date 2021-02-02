@@ -31,7 +31,7 @@ public class VetRecords
         this.LName = LNameVal(lastName);
         this.petName = PNameVal(petName);
         this.gender = GenderVal(gender);
-        this.age = age;
+        this.age = AgeVal(age);
         this.weight = weight;
         this.species = species;
     }//end of all elements constructor
@@ -94,7 +94,7 @@ public class VetRecords
 
     public void setAge(int age)
     {
-        this.age = age;
+        this.age = AgeVal(age);
     }
 
     public void setWeight(double weight)
@@ -111,7 +111,7 @@ public class VetRecords
 
     private String FNameVal(String firstName)
     {
-        while(!firstName.matches("[A-Z][A-z]*"))
+        while(!firstName.matches("[A-Z][a-z]*"))
         {
             System.out.println("Not a valid entry. Try Again.");
             firstName = input.nextLine();
@@ -121,7 +121,7 @@ public class VetRecords
 
     private String LNameVal(String lastName)
     {
-        while(!lastName.matches("[A-Z][A-z]*"))
+        while(!lastName.matches("[A-Z]([-]|[A-z])*"))
         {
             System.out.println("Not a valid entry. Try Again.");
             lastName = input.nextLine();
@@ -148,6 +148,18 @@ public class VetRecords
         }
         return gender;
     }//end of GenderVal method
+
+    private int AgeVal(int age)
+    {
+        String Ages = "" + age;
+        while(!Ages.matches("[0-2][0-9]"))
+        {
+            System.out.println("Not a valid entry. Try Again.");
+            Ages = input.nextLine();
+        }
+    age = Integer.valueOf(Ages);
+        return age;
+    }//end of AgeVal method
 
     //toString
     public String toString()

@@ -19,9 +19,13 @@ public class VetDriver
         System.out.print("Enter Your Pet's Gender: ");
         pup.setGender(scan.nextLine());
 
+        System.out.print("Enter Your Pet's Age: ");
+        pup.setAge(scan.nextInt());
+
         System.out.println("First Name: " + pup.getFName());
         System.out.println("Last Name: " + pup.getLName());
         System.out.println("Pet's Name: " + pup.getPetName());
         System.out.println("Pet's Gender: " + pup.getGender());
+        System.out.println("Pet's Age: " + pup.getAge());
     }//end of main method
 }//end of VetDriver class
