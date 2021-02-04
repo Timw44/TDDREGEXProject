@@ -152,7 +152,7 @@ public class VetRecords
     private int AgeVal(int age)
     {
         String Ages = "" + age;
-        while(!Ages.matches("[0-2][0-9]"))
+        while(!Ages.matches("[0-2][0-9]|[0-9]"))
         {
             System.out.println("Not a valid entry. Try Again.");
             Ages = input.nextLine();
