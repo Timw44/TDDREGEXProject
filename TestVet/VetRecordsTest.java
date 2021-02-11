@@ -84,10 +84,12 @@ class VetRecordsTest
         assertEquals(expected, blankPet.getSpecies());
     }
 
-//    @Test
-//    public void nonValidFName()
-//    {
-//        VetRecords pet = new VetRecords("len")
-//    }
+    @Test
+    public void nonValidFName()
+    {
+        VetRecords pet = new VetRecords("len", "Ney");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getFName());
+    }
 
 }

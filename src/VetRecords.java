@@ -133,20 +133,20 @@ public class VetRecords
 
     private String FNameVal(String firstName)
     {
-        while(!firstName.matches("[A-Z][a-z]*"))
+        if(!firstName.matches("[A-Z][a-z]*"))
         {
-            System.out.println("Not a valid entry. Try Again.");
-            firstName = input.nextLine();
+            return "Not a valid entry. Try Again.";
+            //firstName = input.nextLine();
         }
         return firstName;
     }//end of FNameVal method
 
     private String LNameVal(String lastName)
     {
-        while(!lastName.matches("[A-Z]([-]|[A-z])*"))
+        if(!lastName.matches("[A-Z]([-]|[A-z])*"))
         {
-            System.out.println("Not a valid entry. Try Again.");
-            lastName = input.nextLine();
+            return "Not a valid entry. Try Again.";
+            //lastName = input.nextLine();
         }
         return lastName;
     }//end of LNameVal method
