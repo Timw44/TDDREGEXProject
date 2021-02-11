@@ -92,4 +92,11 @@ class VetRecordsTest
         assertEquals(expected, pet.getFName());
     }
 
+    @Test
+    public void validFName()
+    {
+        VetRecords pet = new VetRecords("Len", "Ney");
+        String expected = "Len";
+        assertEquals(expected, pet.getFName());
+    }
 }
