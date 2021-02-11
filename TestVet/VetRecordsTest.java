@@ -84,4 +84,10 @@ class VetRecordsTest
         assertEquals(expected, blankPet.getSpecies());
     }
 
+//    @Test
+//    public void nonValidFName()
+//    {
+//        VetRecords pet = new VetRecords("len")
+//    }
+
 }

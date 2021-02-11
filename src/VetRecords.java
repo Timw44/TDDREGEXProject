@@ -25,6 +25,28 @@ public class VetRecords
         species = null;
     }//end of empty constructor
 
+    public VetRecords(String fName, String lName)//person constructor
+    {
+        this.FName = FNameVal(fName);
+        this.LName = LNameVal(lName);
+        petName = null;
+        gender = null;
+        age = 0;
+        weight = 0.0;
+        species = null;
+    }
+
+    public VetRecords(String petName, String gender, int age)// pet constructor
+    {
+        FName = null;
+        LName = null;
+        this.petName = PNameVal(petName);
+        this.gender = GenderVal(gender);
+        this.age = AgeVal(age);
+        weight = 0.0;
+        species = null;
+    }
+
     public VetRecords(String firstName, String lastName, String petName, String gender, int age, double weight, String species)
     {
         this.FName = FNameVal(firstName);
