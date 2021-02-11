@@ -153,20 +153,20 @@ public class VetRecords
 
     private String PNameVal(String petName)
     {
-        while(!petName.matches("[A-Z][A-z]*"))
+        if(!petName.matches("[A-Z][A-z]*"))
         {
-            System.out.println("Not a valid entry. Try Again.");
-            petName = input.nextLine();
+            return "Not a valid entry. Try Again.";
+            //petName = input.nextLine();
         }
         return petName;
     }//end of PNameVal method
 
     private String GenderVal(String gender)
     {
-        while(!gender.matches("(Male|male|Female|female)"))
+        if(!gender.matches("(Male|male|Female|female)"))
         {
-            System.out.println("Not a valid entry. Try Again.");
-            gender = input.nextLine();
+            return "Not a valid entry. Try Again.";
+            //gender = input.nextLine();
         }
         return gender;
     }//end of GenderVal method
@@ -174,12 +174,12 @@ public class VetRecords
     private int AgeVal(int age)
     {
         String Ages = "" + age;
-        while(!Ages.matches("[0-2][0-9]|[0-9]"))
+        if(!Ages.matches("[0-2][0-9]|[0-9]"))
         {
-            System.out.println("Not a valid entry. Try Again.");
-            Ages = input.nextLine();
+            return -1;//represents an error
+           //Ages = input.nextLine();
         }
-    age = Integer.valueOf(Ages);
+    //age = Integer.valueOf(Ages);
         return age;
     }//end of AgeVal method
 
