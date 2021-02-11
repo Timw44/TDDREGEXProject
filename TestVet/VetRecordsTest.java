@@ -20,4 +20,68 @@ class VetRecordsTest
         assertEquals(expected, dog.toString());
     }
 
+    //getNSet tests
+    @Test
+    public void fNameGetNSet()
+    {
+        VetRecords blankPet = new VetRecords();
+        String expected = "Jess";
+        blankPet.setFName("Jess");
+        assertEquals(expected, blankPet.getFName());
+    }
+
+    @Test
+    public void lNameGetNSet()
+    {
+        VetRecords blankPet = new VetRecords();
+        String expected = "Newman";
+        blankPet.setLName("Newman");
+        assertEquals(expected, blankPet.getLName());
+    }
+
+    @Test
+    public void petNameGetNSet()
+    {
+        VetRecords blankPet = new VetRecords();
+        String expected = "Mossy";
+        blankPet.setPetName("Mossy");
+        assertEquals(expected, blankPet.getPetName());
+    }
+
+    @Test
+    public void genderGetNSet()
+    {
+        VetRecords blankPet = new VetRecords();
+        String expected = "female";
+        blankPet.setGender("female");
+        assertEquals(expected, blankPet.getGender());
+    }
+
+    @Test
+    public void ageGetNSet()
+    {
+        VetRecords blankPet = new VetRecords();
+        int expected = 3;
+        blankPet.setAge(3);
+        assertEquals(expected, blankPet.getAge());
+    }
+
+    @Test
+    public void weightGetNSet()
+    {
+        VetRecords blankPet = new VetRecords();
+        double expected = 12.4;
+        blankPet.setWeight(12.4);
+        assertEquals(expected, blankPet.getWeight());
+    }
+
+    @Test
+    public void speciesGetNSet()
+    {
+        VetRecords blankPet = new VetRecords();
+        String expected = "Dog";
+        blankPet.setSpecies("Dog");
+        assertEquals(expected, blankPet.getSpecies());
+    }
+
 }
