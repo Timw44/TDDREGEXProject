@@ -202,7 +202,24 @@ public class VetRecords
             //gender = input.nextLine();
         }
         return size;
-    }//end of GenderVal method
+    }//end of SizeVal method
+
+    public String needsDiet(double weight)
+    {
+        if(size.matches("(L|Large)") && weight > 40.0)
+        {
+            return "Needs a diet.";
+        }
+        else if(size.matches("(M|Medium)") && weight > 29.5)
+        {
+            return "Needs a diet.";
+        }
+        else if(size.matches("(S|Small)") && weight > 16.0)
+        {
+            return "Needs a diet.";
+        }
+        return "Doesn't need a diet.";
+    }//end of needsDiet method
 
     //toString
     public String toString()
