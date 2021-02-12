@@ -115,4 +115,20 @@ class VetRecordsTest
         String expected = "Lee-Won";
         assertEquals(expected, pet.getLName());
     }
+
+    @Test
+    public void nonValidPetName()
+    {
+        VetRecords pet = new VetRecords("max", "Male", 2);
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getPetName());
+    }
+
+    @Test
+    public void validPetName()
+    {
+        VetRecords pet = new VetRecords("Max", "male", 2);
+        String expected = "Max";
+        assertEquals(expected, pet.getPetName());
+    }
 }
