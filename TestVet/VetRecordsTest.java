@@ -99,4 +99,20 @@ class VetRecordsTest
         String expected = "Len";
         assertEquals(expected, pet.getFName());
     }
+
+    @Test
+    public void nonValidLName()
+    {
+        VetRecords pet = new VetRecords("Ren", "lie");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getLName());
+    }
+
+    @Test
+    public void validLName()
+    {
+        VetRecords pet = new VetRecords("Len", "Lee-Won");
+        String expected = "Lee-Won";
+        assertEquals(expected, pet.getLName());
+    }
 }
