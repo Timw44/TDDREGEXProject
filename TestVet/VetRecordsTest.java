@@ -76,6 +76,15 @@ class VetRecordsTest
     }
 
     @Test
+    public void sizeGetNSet()
+    {
+        VetRecords blankPet = new VetRecords();
+        String expected = "M";
+        blankPet.setSize("M");
+        assertEquals(expected, blankPet.getWeight());
+    }
+
+    @Test
     public void speciesGetNSet()
     {
         VetRecords blankPet = new VetRecords();
@@ -175,24 +184,24 @@ class VetRecordsTest
     @Test
     public void largePet()
     {
-        VetRecords pet = new VetRecords();
-        String expected = "Big Dog";
+        VetRecords pet = new VetRecords("Oak", "male", 4, "Large");
+        String expected = "Large";
         assertEquals(expected, pet.getSize());
     }
 
     @Test
     public void mediumPet()
     {
-        VetRecords pet = new VetRecords();
-        String expected = "Medium Dog";
+        VetRecords pet = new VetRecords("Oak", "male", 4, "Medium");
+        String expected = "Medium";
         assertEquals(expected, pet.getSize());
     }
 
     @Test
     public void smallPet()
     {
-        VetRecords pet = new VetRecords();
-        String expected = "Small Dog";
+        VetRecords pet = new VetRecords("Oak", "male", 4, "Small");
+        String expected = "Small";
         assertEquals(expected, pet.getSize());
     }
 }
