@@ -172,4 +172,27 @@ class VetRecordsTest
         assertEquals(expected, pet.getAge());
     }
 
+    @Test
+    public void largePet()
+    {
+        VetRecords pet = new VetRecords();
+        String expected = "Big Dog";
+        assertEquals(expected, pet.getSize());
+    }
+
+    @Test
+    public void mediumPet()
+    {
+        VetRecords pet = new VetRecords();
+        String expected = "Medium Dog";
+        assertEquals(expected, pet.getSize());
+    }
+
+    @Test
+    public void smallPet()
+    {
+        VetRecords pet = new VetRecords();
+        String expected = "Small Dog";
+        assertEquals(expected, pet.getSize());
+    }
 }
