@@ -81,7 +81,7 @@ class VetRecordsTest
         VetRecords blankPet = new VetRecords();
         String expected = "M";
         blankPet.setSize("M");
-        assertEquals(expected, blankPet.getWeight());
+        assertEquals(expected, blankPet.getSize());
     }
 
     @Test
@@ -210,7 +210,7 @@ class VetRecordsTest
     {
         VetRecords pet = new VetRecords("Peanut", "Male", 3, "L");
         String expected = "Needs a diet.";
-        assertEquals(expected, pet.getWeight());
+        assertEquals(expected, pet.needsDiet(42.6));
     }
 
     @Test
@@ -218,14 +218,14 @@ class VetRecordsTest
     {
         VetRecords pet = new VetRecords("Peanut", "Male", 3, "M");
         String expected = "Needs a diet.";
-        assertEquals(expected, pet.getWeight());
+        assertEquals(expected, pet.needsDiet(34.2));
     }
 
     @Test
     public void SDogNeedsDiet()
     {
-        VetRecords pet = new VetRecords("Peanut", "Male", 3, "M");
+        VetRecords pet = new VetRecords("Peanut", "Male", 3, "S");
         String expected = "Needs a diet.";
-        assertEquals(expected, pet.getWeight());
+        assertEquals(expected, pet.needsDiet(20.0));
     }
 }
