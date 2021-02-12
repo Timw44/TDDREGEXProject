@@ -9,6 +9,7 @@ public class VetRecords
     public String petName;
     public String species;
     public String gender;
+    public String size;
     public int age;
     public double weight;
 
@@ -22,6 +23,7 @@ public class VetRecords
         gender = null;
         age = 0;
         weight = 0.0;
+        size = null;
         species = null;
     }//end of empty constructor
 
@@ -33,10 +35,11 @@ public class VetRecords
         gender = null;
         age = 0;
         weight = 0.0;
+        size = null;
         species = null;
     }
 
-    public VetRecords(String petName, String gender, int age)// pet constructor
+    public VetRecords(String petName, String gender, int age, String size)// pet constructor
     {
         FName = null;
         LName = null;
@@ -44,10 +47,11 @@ public class VetRecords
         this.gender = GenderVal(gender);
         this.age = AgeVal(age);
         weight = 0.0;
+        this.size = size;
         species = null;
     }
 
-    public VetRecords(String firstName, String lastName, String petName, String gender, int age, double weight, String species)
+    public VetRecords(String firstName, String lastName, String petName, String gender, int age, double weight, String size, String species)
     {
         this.FName = FNameVal(firstName);
         this.LName = LNameVal(lastName);
@@ -55,6 +59,7 @@ public class VetRecords
         this.gender = GenderVal(gender);
         this.age = AgeVal(age);
         this.weight = weight;
+        this.size = size;
         this.species = species;
     }//end of all elements constructor
 
