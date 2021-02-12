@@ -7,8 +7,8 @@ class VetRecordsTest
     @Test
     public void initialToString()//will need to be changed as more variables are added
     {
-    VetRecords dog = new VetRecords("Ty", "Ler", "Max", "Male", 10, 25.6, "Dog");
-    String expected = "Owner: Ty, Ler; Pet: Max, Male, 10 years old, 25.6kg, Dog";
+    VetRecords dog = new VetRecords("Ty", "Ler", "Max", "Male", 10, 25.6, "M", "Dog");
+    String expected = "Owner: Ty, Ler; Pet: Max, Male, 10 years old, 25.6kg, M, Dog";
     assertEquals(expected, dog.toString());
     }
 
@@ -16,7 +16,7 @@ class VetRecordsTest
     public void defaultConstructor()//will need to be changed as more variables are added
     {
         VetRecords dog = new VetRecords();
-        String expected = "Owner: null, null; Pet: null, null, 0 years old, 0.0kg, null";
+        String expected = "Owner: null, null; Pet: null, null, 0 years old, 0.0kg, null, null";
         assertEquals(expected, dog.toString());
     }
 
@@ -119,7 +119,7 @@ class VetRecordsTest
     @Test
     public void nonValidPetName()
     {
-        VetRecords pet = new VetRecords("max", "Male", 2);
+        VetRecords pet = new VetRecords("max", "Male", 2, "Small");
         String expected = "Not a valid entry. Try Again.";
         assertEquals(expected, pet.getPetName());
     }
@@ -127,7 +127,7 @@ class VetRecordsTest
     @Test
     public void validPetName()
     {
-        VetRecords pet = new VetRecords("Max", "male", 2);
+        VetRecords pet = new VetRecords("Max", "male", 2, "Small");
         String expected = "Max";
         assertEquals(expected, pet.getPetName());
     }
@@ -135,7 +135,7 @@ class VetRecordsTest
     @Test
     public void nonValidGender()
     {
-        VetRecords pet = new VetRecords("Neo", "f", 1);
+        VetRecords pet = new VetRecords("Neo", "f", 1, "Medium");
         String expected = "Not a valid entry. Try Again.";
         assertEquals(expected, pet.getGender());
     }
@@ -143,7 +143,7 @@ class VetRecordsTest
     @Test
     public void validGender()
     {
-        VetRecords pet = new VetRecords("Neo", "female", 1);
+        VetRecords pet = new VetRecords("Neo", "female", 1, "Medium");
         String expected = "female";
         assertEquals(expected, pet.getGender());
     }
@@ -151,7 +151,7 @@ class VetRecordsTest
     @Test
     public void tooOld()
     {
-        VetRecords pet = new VetRecords("Neo", "Female", 45);
+        VetRecords pet = new VetRecords("Neo", "Female", 45, "S");
         int expected = -1;
         assertEquals(expected, pet.getAge());
     }
@@ -159,7 +159,7 @@ class VetRecordsTest
     @Test
     public void tooYoung()
     {
-        VetRecords pet = new VetRecords("Neo", "Female", -4);
+        VetRecords pet = new VetRecords("Neo", "Female", -4, "L");
         int expected = -1;
         assertEquals(expected, pet.getAge());
     }
@@ -167,7 +167,7 @@ class VetRecordsTest
     @Test
     public void old()
     {
-        VetRecords pet = new VetRecords("Gramps", "Male", 19);
+        VetRecords pet = new VetRecords("Gramps", "Male", 19, "L");
         int expected = 19;
         assertEquals(expected, pet.getAge());
     }
