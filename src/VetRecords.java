@@ -47,7 +47,7 @@ public class VetRecords
         this.gender = GenderVal(gender);
         this.age = AgeVal(age);
         weight = 0.0;
-        this.size = size;
+        this.size = SizeVal(size);
         species = null;
     }
 
@@ -59,7 +59,7 @@ public class VetRecords
         this.gender = GenderVal(gender);
         this.age = AgeVal(age);
         this.weight = weight;
-        this.size = size;
+        this.size = SizeVal(size);
         this.species = species;
     }//end of all elements constructor
 
@@ -132,7 +132,7 @@ public class VetRecords
     }
 
     public void setSize(String size) {
-        this.size = size;
+        this.size = SizeVal(size);
     }
 
     public void setSpecies(String species)

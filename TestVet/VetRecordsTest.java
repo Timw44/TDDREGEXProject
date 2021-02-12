@@ -204,4 +204,28 @@ class VetRecordsTest
         String expected = "Small";
         assertEquals(expected, pet.getSize());
     }
+
+    @Test
+    public void LDogNeedsDiet()
+    {
+        VetRecords pet = new VetRecords("Peanut", "Male", 3, "L");
+        String expected = "Needs a diet.";
+        assertEquals(expected, pet.getWeight());
+    }
+
+    @Test
+    public void MDogNeedsDiet()
+    {
+        VetRecords pet = new VetRecords("Peanut", "Male", 3, "M");
+        String expected = "Needs a diet.";
+        assertEquals(expected, pet.getWeight());
+    }
+
+    @Test
+    public void SDogNeedsDiet()
+    {
+        VetRecords pet = new VetRecords("Peanut", "Male", 3, "M");
+        String expected = "Needs a diet.";
+        assertEquals(expected, pet.getWeight());
+    }
 }
