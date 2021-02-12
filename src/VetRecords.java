@@ -94,6 +94,8 @@ public class VetRecords
         return weight;
     }
 
+    public String getSize() { return size;}
+
     public String getSpecies()
     {
         return species;
@@ -127,6 +129,10 @@ public class VetRecords
     public void setWeight(double weight)
     {
         this.weight = weight;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 
     public void setSpecies(String species)
