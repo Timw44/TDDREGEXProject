@@ -131,4 +131,20 @@ class VetRecordsTest
         String expected = "Max";
         assertEquals(expected, pet.getPetName());
     }
+
+    @Test
+    public void nonValidGender()
+    {
+        VetRecords pet = new VetRecords("Neo", "f", 1);
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getGender());
+    }
+
+    @Test
+    public void validGender()
+    {
+        VetRecords pet = new VetRecords("Neo", "female", 1);
+        String expected = "female";
+        assertEquals(expected, pet.getGender());
+    }
 }
