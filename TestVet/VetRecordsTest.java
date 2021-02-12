@@ -147,4 +147,29 @@ class VetRecordsTest
         String expected = "female";
         assertEquals(expected, pet.getGender());
     }
+
+    @Test
+    public void tooOld()
+    {
+        VetRecords pet = new VetRecords("Neo", "Female", 45);
+        int expected = -1;
+        assertEquals(expected, pet.getAge());
+    }
+
+    @Test
+    public void tooYoung()
+    {
+        VetRecords pet = new VetRecords("Neo", "Female", -4);
+        int expected = -1;
+        assertEquals(expected, pet.getAge());
+    }
+
+    @Test
+    public void old()
+    {
+        VetRecords pet = new VetRecords("Gramps", "Male", 19);
+        int expected = 19;
+        assertEquals(expected, pet.getAge());
+    }
+
 }
