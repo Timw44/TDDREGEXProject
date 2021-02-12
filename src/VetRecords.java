@@ -194,10 +194,20 @@ public class VetRecords
         return age;
     }//end of AgeVal method
 
+    private String SizeVal(String size)
+    {
+        if(!size.matches("(L|M|S|Large|Medium|Small)"))
+        {
+            return "Not a valid entry. Try Again.";
+            //gender = input.nextLine();
+        }
+        return size;
+    }//end of GenderVal method
+
     //toString
     public String toString()
     {
         return "Owner: " + FName + ", " + LName + "; Pet: " + petName + ", " + gender + ", " + age + " years old, " +
-                weight + "kg, " + species;
+                weight + "kg, " + size + ", " + species;
     }//end of toString
 }//end of VetRecords class
