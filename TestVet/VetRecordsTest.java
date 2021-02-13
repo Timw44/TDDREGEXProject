@@ -214,6 +214,14 @@ class VetRecordsTest
     }
 
     @Test
+    public void LDogIsHealthy()
+    {
+        VetRecords pet = new VetRecords("Peanut", "Male", 3, "Large");
+        String expected = "Doesn't need a diet.";
+        assertEquals(expected, pet.needsDiet(37.2));
+    }
+
+    @Test
     public void MDogNeedsDiet()
     {
         VetRecords pet = new VetRecords("Peanut", "Male", 3, "M");
@@ -222,10 +230,26 @@ class VetRecordsTest
     }
 
     @Test
+    public void MDogIsHealthy()
+    {
+        VetRecords pet = new VetRecords("Peanut", "Male", 3, "Medium");
+        String expected = "Doesn't need a diet.";
+        assertEquals(expected, pet.needsDiet(28.9));
+    }
+
+    @Test
     public void SDogNeedsDiet()
     {
         VetRecords pet = new VetRecords("Peanut", "Male", 3, "S");
         String expected = "Needs a diet.";
         assertEquals(expected, pet.needsDiet(20.0));
+    }
+
+    @Test
+    public void SDogIsHealthy()
+    {
+        VetRecords pet = new VetRecords("Peanut", "Male", 3, "Small");
+        String expected = "Doesn't need a diet.";
+        assertEquals(expected, pet.needsDiet(10.8));
     }
 }
