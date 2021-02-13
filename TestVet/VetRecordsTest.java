@@ -158,10 +158,26 @@ class VetRecordsTest
     }
 
     @Test
+    public void nonValidMGender()
+    {
+        VetRecords pet = new VetRecords("Neo", "M", 1, "Medium");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getGender());
+    }
+
+    @Test
     public void validGender()
     {
         VetRecords pet = new VetRecords("Neo", "female", 1, "Medium");
         String expected = "female";
+        assertEquals(expected, pet.getGender());
+    }
+
+    @Test
+    public void validMGender()
+    {
+        VetRecords pet = new VetRecords("Neo", "Male", 1, "Medium");
+        String expected = "Male";
         assertEquals(expected, pet.getGender());
     }
 
