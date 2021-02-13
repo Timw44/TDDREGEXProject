@@ -190,6 +190,22 @@ class VetRecordsTest
     }
 
     @Test
+    public void lPet()
+    {
+        VetRecords pet = new VetRecords("Oak", "male", 4, "L");
+        String expected = "L";
+        assertEquals(expected, pet.getSize());
+    }
+
+    @Test
+    public void nonValidLPet()
+    {
+        VetRecords pet = new VetRecords("Oak", "male", 4, "large");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getSize());
+    }
+
+    @Test
     public void mediumPet()
     {
         VetRecords pet = new VetRecords("Oak", "male", 4, "Medium");
@@ -198,10 +214,42 @@ class VetRecordsTest
     }
 
     @Test
+    public void mPet()
+    {
+        VetRecords pet = new VetRecords("Oak", "male", 4, "M");
+        String expected = "M";
+        assertEquals(expected, pet.getSize());
+    }
+
+    @Test
+    public void nonValidMPet()
+    {
+        VetRecords pet = new VetRecords("Oak", "male", 4, "medium");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getSize());
+    }
+
+    @Test
     public void smallPet()
     {
         VetRecords pet = new VetRecords("Oak", "male", 4, "Small");
         String expected = "Small";
+        assertEquals(expected, pet.getSize());
+    }
+
+    @Test
+    public void SPet()
+    {
+        VetRecords pet = new VetRecords("Oak", "male", 4, "S");
+        String expected = "S";
+        assertEquals(expected, pet.getSize());
+    }
+
+    @Test
+    public void nonValidSPet()
+    {
+        VetRecords pet = new VetRecords("Oak", "male", 4, "small");
+        String expected = "Not a valid entry. Try Again.";
         assertEquals(expected, pet.getSize());
     }
 
