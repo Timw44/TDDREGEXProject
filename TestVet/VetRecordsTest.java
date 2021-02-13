@@ -93,6 +93,8 @@ class VetRecordsTest
         assertEquals(expected, blankPet.getSpecies());
     }
 
+
+    //First Name tests
     @Test
     public void nonValidFName()
     {
@@ -109,6 +111,8 @@ class VetRecordsTest
         assertEquals(expected, pet.getFName());
     }
 
+
+    //Last Name tests
     @Test
     public void nonValidLName()
     {
@@ -125,6 +129,8 @@ class VetRecordsTest
         assertEquals(expected, pet.getLName());
     }
 
+
+    //Pet Name Tests
     @Test
     public void nonValidPetName()
     {
@@ -141,6 +147,8 @@ class VetRecordsTest
         assertEquals(expected, pet.getPetName());
     }
 
+
+    //Gender tests
     @Test
     public void nonValidGender()
     {
@@ -157,6 +165,8 @@ class VetRecordsTest
         assertEquals(expected, pet.getGender());
     }
 
+
+    //Age Tests
     @Test
     public void tooOld()
     {
@@ -181,6 +191,8 @@ class VetRecordsTest
         assertEquals(expected, pet.getAge());
     }
 
+
+    //Size tests
     @Test
     public void largePet()
     {
@@ -253,6 +265,8 @@ class VetRecordsTest
         assertEquals(expected, pet.getSize());
     }
 
+
+// Diet Tests
     @Test
     public void LDogNeedsDiet()
     {
