@@ -200,10 +200,34 @@ class VetRecordsTest
     }
 
     @Test
-    public void old()
+    public void veryOld()
     {
         VetRecords pet = new VetRecords("Gramps", "Male", 19, "L");
         int expected = 19;
+        assertEquals(expected, pet.getAge());
+    }
+
+    @Test
+    public void old()
+    {
+        VetRecords pet = new VetRecords("Pops", "Male", 12, "L");
+        int expected = 12;
+        assertEquals(expected, pet.getAge());
+    }
+
+    @Test
+    public void teen()
+    {
+        VetRecords pet = new VetRecords("Ty", "Male", 7, "L");
+        int expected = 7;
+        assertEquals(expected, pet.getAge());
+    }
+
+    @Test
+    public void young()
+    {
+        VetRecords pet = new VetRecords("Pup", "Male", 1, "L");
+        int expected = 1;
         assertEquals(expected, pet.getAge());
     }
 
