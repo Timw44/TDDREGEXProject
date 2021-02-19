@@ -104,10 +104,26 @@ class VetRecordsTest
     }
 
     @Test
+    public void nonValidFName2()
+    {
+        VetRecords pet = new VetRecords("Ty Ler", "Ney");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getFName());
+    }
+
+    @Test
     public void validFName()
     {
         VetRecords pet = new VetRecords("Len", "Ney");
         String expected = "Len";
+        assertEquals(expected, pet.getFName());
+    }
+
+    @Test
+    public void validFName2()
+    {
+        VetRecords pet = new VetRecords("Nick", "Fur");
+        String expected = "Nick";
         assertEquals(expected, pet.getFName());
     }
 
@@ -123,6 +139,14 @@ class VetRecordsTest
 
     @Test
     public void validLName()
+    {
+        VetRecords pet = new VetRecords("Len", "Lee");
+        String expected = "Lee";
+        assertEquals(expected, pet.getLName());
+    }
+
+    @Test
+    public void validLName2()
     {
         VetRecords pet = new VetRecords("Len", "Lee-Won");
         String expected = "Lee-Won";
@@ -140,10 +164,34 @@ class VetRecordsTest
     }
 
     @Test
+    public void nonValidPetName2()
+    {
+        VetRecords pet = new VetRecords("Sky Ler", "Male", 2, "Small");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getPetName());
+    }
+
+    @Test
+    public void nonValidPetName3()
+    {
+        VetRecords pet = new VetRecords("Max123", "Male", 2, "Small");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getPetName());
+    }
+
+    @Test
     public void validPetName()
     {
         VetRecords pet = new VetRecords("Max", "male", 2, "Small");
         String expected = "Max";
+        assertEquals(expected, pet.getPetName());
+    }
+
+    @Test
+    public void validPetName2()
+    {
+        VetRecords pet = new VetRecords("Sky", "male", 2, "Small");
+        String expected = "Sky";
         assertEquals(expected, pet.getPetName());
     }
 
