@@ -214,9 +214,25 @@ class VetRecordsTest
 
     //Gender tests
     @Test
-    public void nonValidGender()
+    public void nonValidFGender()
     {
         VetRecords pet = new VetRecords("Neo", "f", 1, "Medium");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getGender());
+    }
+
+    @Test
+    public void nonValidFGender2()
+    {
+        VetRecords pet = new VetRecords("Neo", "F", 1, "Medium");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getGender());
+    }
+
+    @Test
+    public void nonValidGender()
+    {
+        VetRecords pet = new VetRecords("Neo", "dog", 1, "Medium");
         String expected = "Not a valid entry. Try Again.";
         assertEquals(expected, pet.getGender());
     }
@@ -230,7 +246,15 @@ class VetRecordsTest
     }
 
     @Test
-    public void validGender()
+    public void nonValidMGender2()
+    {
+        VetRecords pet = new VetRecords("Neo", "m", 1, "Medium");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getGender());
+    }
+
+    @Test
+    public void validFGender()
     {
         VetRecords pet = new VetRecords("Neo", "female", 1, "Medium");
         String expected = "female";
@@ -238,7 +262,23 @@ class VetRecordsTest
     }
 
     @Test
+    public void validFGender2()
+    {
+        VetRecords pet = new VetRecords("Neo", "Female", 1, "Medium");
+        String expected = "Female";
+        assertEquals(expected, pet.getGender());
+    }
+
+    @Test
     public void validMGender()
+    {
+        VetRecords pet = new VetRecords("Neo", "male", 1, "Medium");
+        String expected = "male";
+        assertEquals(expected, pet.getGender());
+    }
+
+    @Test
+    public void validMGender2()
     {
         VetRecords pet = new VetRecords("Neo", "Male", 1, "Medium");
         String expected = "Male";
