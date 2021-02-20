@@ -409,6 +409,30 @@ class VetRecordsTest
         assertEquals(expected, pet.getSize());
     }
 
+    @Test
+    public void nonValidPetSize()
+    {
+        VetRecords pet = new VetRecords("Oak", "male", 4, "tiny");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getSize());
+    }
+
+    @Test
+    public void nonValidPetSize2()
+    {
+        VetRecords pet = new VetRecords("Oak", "male", 4, "Huge");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getSize());
+    }
+
+    @Test
+    public void nonValidPetSize3()
+    {
+        VetRecords pet = new VetRecords("Oak", "male", 4, "Big");
+        String expected = "Not a valid entry. Try Again.";
+        assertEquals(expected, pet.getSize());
+    }
+
 
 // Diet Tests
     @Test
