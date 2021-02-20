@@ -20,6 +20,22 @@ class VetRecordsTest
         assertEquals(expected, dog.toString());
     }
 
+    @Test
+    public void personConstructor()//will need to be changed as more variables are added
+    {
+        VetRecords dog = new VetRecords("Jess", "Key");
+        String expected = "Owner: Jess, Key; Pet: null, null, 0 years old, 0.0kg, null, null";
+        assertEquals(expected, dog.toString());
+    }
+
+    @Test
+    public void petConstructor()//will need to be changed as more variables are added
+    {
+        VetRecords dog = new VetRecords("Felix", "Male", 3, "Medium");
+        String expected = "Owner: null, null; Pet: Felix, Male, 3 years old, 0.0kg, Medium, null";
+        assertEquals(expected, dog.toString());
+    }
+
     //getNSet tests
     @Test
     public void fNameGetNSet()
